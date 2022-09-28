@@ -4,6 +4,9 @@ class Start {
     }
 }
 
-class Employee { }
-final class Contractor extends Employee { }
-// class  Daily extends Contractor { }  // ERROR
+sealed class Vehicle permits Car, Truck { }
+
+final class Car extends Vehicle { }
+non-sealed class Truck extends Vehicle { }
+
+final class Truck10Wheel extends Truck {  }
